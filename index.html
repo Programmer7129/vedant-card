@@ -59,27 +59,23 @@
   /* ---- Banner ---- */
   .banner {
     height: 120px;
-    background: var(--accent);
+    background: var(--card-bg);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    gap: 14px;
+    border-bottom: 1px solid var(--border);
   }
 
-  .banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-  }
-
-  .banner-logo {
-    position: relative;
-    height: 36px;
+  .banner-icon {
+    height: 44px;
     width: auto;
-    opacity: 0.9;
-    filter: brightness(0) invert(1);
+  }
+
+  .banner-text {
+    height: 28px;
+    width: auto;
   }
 
   /* ---- Header ---- */
@@ -396,7 +392,8 @@
   <div class="card">
 
     <div class="banner">
-      <img src="company-icon.ico" alt="Vrin" class="banner-logo">
+      <img src="company-icon.ico" alt="Vrin icon" class="banner-icon">
+      <img src="logo-text.png" alt="VRiN" class="banner-text">
     </div>
 
     <div class="card-header">

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Vedant Patel — Vrin</title>
+<link rel="icon" href="company-icon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -55,9 +56,35 @@
     overflow: hidden;
   }
 
+  /* ---- Banner ---- */
+  .banner {
+    height: 120px;
+    background: var(--accent);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  }
+
+  .banner-logo {
+    position: relative;
+    height: 36px;
+    width: auto;
+    opacity: 0.9;
+    filter: brightness(0) invert(1);
+  }
+
   /* ---- Header ---- */
   .card-header {
-    padding: 36px 32px 28px;
+    padding: 0 32px 28px;
     position: relative;
   }
 
@@ -69,19 +96,22 @@
     background: var(--border);
   }
 
-  .monogram {
-    width: 52px; height: 52px;
-    background: var(--accent);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    margin-bottom: 20px;
+  .profile-photo-wrap {
+    margin-top: -44px;
+    margin-bottom: 16px;
+    position: relative;
+    width: 88px;
+    height: 88px;
+  }
+
+  .profile-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: block;
   }
 
   .name {
@@ -365,8 +395,14 @@
 <div class="card-container">
   <div class="card">
 
+    <div class="banner">
+      <img src="company-icon.ico" alt="Vrin" class="banner-logo">
+    </div>
+
     <div class="card-header">
-      <div class="monogram">VP</div>
+      <div class="profile-photo-wrap">
+        <img src="profile-photo.JPEG" alt="Vedant Patel" class="profile-photo">
+      </div>
       <div class="name">Vedant Patel</div>
       <div class="title">Founder & CEO <span>·</span> Vrin</div>
     </div>
